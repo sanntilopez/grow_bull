@@ -11,19 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/productos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Grow Bull - Suplementos deportivos</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="../pages/ofertas.html">OFERTAS</a></li>
-                <li><img src="../img/GrowBullWhite.png" alt="Grow Bull"></li>
-                <li><a href="../pages/beneficios.html">BENEFICIOS</a></li>
-                <li><a href="../pages/contacto.html">CONTACTO</a></li>
-            </ul>
+    <header class="p-3 bg-black">
+        <nav class="container navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../img/GrowBullWhite.png" alt="Grow Bull"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fas fa-bars text-light fs-1 "></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav fs-2 gap-5">
+                <a class="nav-link active text-light " aria-current="page" href="../index.html">HOME</a>
+                <a class="nav-link text-light" href="./ofertas.html">OFERTAS</a>
+                <a class="nav-link text-light" href="./beneficios.html">BENEFICIOS</a>
+                <a class="nav-link text-light" href="./contacto.html">CONTACTO</a>
+                </div>
+            </div>
+            </div>
         </nav>
     </header>
         <section class="section1">
@@ -31,39 +39,39 @@
                 <h1>PRODUCTOS</h1>
             </article>
         </section>
-        <section class="products">
-            <div class="grid-container">
-                <article class="products__box">
+        <section class="products container">
+            <div class="row">
+                <article class="products__box col-md-4">
                     <picture>
                         <img class="products__img" src="../img/gym.jpg" alt="gym">
                     </picture>
                     <p>Lorem ipsum dolor sit amet</p>
                 </article>
-                <article class="products__box">
+                <article class="products__box col-md-4">
                     <picture>
                         <img class="products__img" src="../img/gym.jpg" alt="gym">
                     </picture>
                     <p>Lorem ipsum dolor sit amet</p>
                 </article>
-                <article class="products__box">
+                <article class="products__box col-md-4">
                     <picture>
                         <img class="products__img" src="../img/gym.jpg" alt="gym">
                     </picture>
                     <p>Lorem ipsum dolor sit amet</p>
                 </article>
-                <article class="products__box">
+                <article class="products__box col-md-4">
                     <picture>
                         <img class="products__img" src="../img/gym.jpg" alt="gym">
                     </picture>
                     <p>Lorem ipsum dolor sit amet</p>
                 </article>
-                <article class="products__box">
+                <article class="products__box col-md-4">
                     <picture>
                         <img class="products__img" src="../img/gym.jpg" alt="gym">
                     </picture>
                     <p>Lorem ipsum dolor sit amet</p>
                 </article>
-                <article class="products__box">
+                <article class="products__box col-md-4">
                     <picture>
                         <img class="products__img" src="../img/gym.jpg" alt="gym">
                     </picture>
@@ -84,5 +92,7 @@
             </div>
         </div>   
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

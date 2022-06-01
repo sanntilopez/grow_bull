@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    font-family: var(--font-main);
+    font-family: var(--font-main) !important;
     display: grid;
     grid-template-areas: 
     "header header"
@@ -42,94 +42,19 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
+    color: var(--white);
 }
 
 /* HEADER */
-
-header {
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex: 1;
-    grid-area: header;
+.nav-link:hover {
+    color: var(--green) !important;
 }
-
-.headerbox {
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-    padding: 2rem 0;
-    align-items: center;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-}
-
-
-
-nav ul {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-nav ul a {
-    color: var(--white);  
-    font-size: var(--alternative); 
-    position: relative;
-}
-
-nav ul a.active,nav ul a:hover {
-    color: var(--green);
-}
-
-header li {
-    color: var(--white);
-    list-style-type: none;
-    padding: 0 3.4rem;
-}
-
-header li a:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background: var(--green);
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.2s ease-in-out;
-}
-
-header li a:hover:after {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-header label {
-    font-size: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-header input {
-    display: none;
-}
-
-header img {
+ header img {
     width: 80px;
-}
+} 
 
-header li a:hover {
-    color: var(--green);
-}
+
 
 /* BACKGROUND IMG */
 
@@ -160,8 +85,8 @@ header li a:hover {
 }
 
 h1 {
-    color: white;
-    font-size: var(--ultrabig);
+    color: white !important;
+    font-size: var(--ultrabig) !important;
 }
 
 .section1__article p {
@@ -173,7 +98,7 @@ h1 {
 
 .section1__article a {
     width: fit-content;
-    color: var(--black);
+    color: var(--black) !important;
     font-size: var(--medium);
     background-color: var(--green);
     padding: .8rem 1.3rem;

@@ -30,7 +30,7 @@ html {
 }
 
 body {
-    font-family: var(--font-main);
+    font-family: var(--font-main) !important;
     display: grid;
     grid-template-areas: 
     "header"
@@ -43,73 +43,18 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /* HEADER */
 
-header {
-    background-color: var(--black);
-    display: flex;
-    justify-content: center;
-    grid-area: header;
+.nav-link:hover {
+    color: var(--green) !important;
 }
 
-nav {
-    width: 50%;
-}
-
-nav ul {
-    width: 100%;
-    display: flex;
-    padding: 1rem 0;
-    align-items: center;
-    justify-content: space-around;
-}
-
-nav ul a {
-    color: var(--white);  
-    font-size: var(--alternative);
-    position: relative;
-}
-
-header li a:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background: var(--green);
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.2s ease-in-out;
-}
-
-header li a:hover:after {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-nav ul a.active,nav ul a:hover {
-    color: var(--green);
-}
-
-header li {
-    color: var(--white);
-    list-style-type: none;
-    padding: 0 3.4rem;
-}
-
-li img {
-    width: 70px;
-}
-
-header li a:hover {
-    color: var(--green);
-}
-
+header img {
+    width: 80px;
+} 
 /* BACKGROUND IMG */
 
 .section1 {
@@ -130,41 +75,30 @@ header li a:hover {
 }
 
 h1 {
-    color: white;
-    font-size: var(--ultrabig);
+    color: white !important;
+    font-size: var(--ultrabig) !important;
 }
 
 /* PRODUCTS */
 
-.products {
+ .products {
     display: flex;  
     justify-content: center;
     margin: 5rem 0;
     grid-area: prod;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 400px));
-    grid-template-rows: auto auto;
     gap: 2rem;
-}
-
-.products__box {
-    box-shadow: 0px 0px 8px #0008;
 }
 
 .products__box:hover {
     transform: scale(1.01);
 }
-
-
 .products p {
     font-size: 2em;
     padding: 1.5rem;
 }
 
-.products__img {
+ 
+ .products__img {
     max-width: 100%;
 }
 
