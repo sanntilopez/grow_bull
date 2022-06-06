@@ -40,7 +40,6 @@ header {
     background-color: var(--black);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     grid-area: header;
 }
 
@@ -220,6 +219,7 @@ h1 {
     font-size: 2em;
     cursor: pointer;
     margin-top: 3rem;
+    border: none;
     font-family: 'Oswald', sans-serif;
 }
 #form form input[type="submit"]:hover {
@@ -275,7 +275,7 @@ i {
         font-size: var(--small);
     }
     .form__box {
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -317,7 +317,7 @@ i {
         left: 0;
     }
     .form__box {
-        padding: 5rem 2rem;
+        padding: 5rem 3rem;
     }
 }
 

@@ -40,7 +40,6 @@ header {
     background-color: var(--black);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     grid-area: header;
 }
 
@@ -246,6 +245,12 @@ i {
 }
 
 @media screen and (max-width:768px) {
+    .oferta1 {
+        width: 95%;
+    }
+    .ofertas2 {
+        width: 95%;
+    }
     .footbox__div {
         flex-direction: column;
     }

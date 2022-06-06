@@ -40,7 +40,6 @@ header {
     background-color: var(--black);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     grid-area: header;
 }
 

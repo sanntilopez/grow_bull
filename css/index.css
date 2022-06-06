@@ -32,13 +32,11 @@ body {
     font-family: var(--font-main);
     display: grid;
     grid-template-areas: 
-    "header header"
     "bgr bgr"
     "img info"
     "footer footer";
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: repeat(2, 1fr);
-
 }
 
 a {
@@ -48,12 +46,8 @@ a {
 /* HEADER */
 
 header {
-    background-color: transparent;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex: 1;
-    grid-area: header;
 }
 
 .headerbox {
@@ -69,10 +63,7 @@ nav {
     align-items: center;
 }
 
-
-
 nav ul {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -84,7 +75,7 @@ nav ul a {
     position: relative;
 }
 
-nav ul a.active,nav ul a:hover {
+nav ul a.active, nav ul a:hover {
     color: var(--green);
 }
 
@@ -147,7 +138,7 @@ header li a:hover {
 .section1__article {
     display: flex;
     justify-content: center;
-    flex: 10;
+    flex: 2;
     margin-bottom: 10rem;
 }
 
@@ -215,7 +206,6 @@ h1 {
 
 .home__box h2 {
     font-size: var(--big);
-    width: 400px;
 }
 
 .home__box p {
@@ -223,6 +213,7 @@ h1 {
     min-width: 300px;
     font-size: var(--base);
     font-family: var(--font-secondary);
+    margin-right: 2rem;
 }
 
 /* FOOTER */
@@ -270,11 +261,12 @@ i {
 }
 
 /* MEDIA QUERIES */
+
 @media screen and (max-width: 1000px) {
     body {
-        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-rows: auto 1fr auto auto;
         grid-template-columns: auto;
-        grid-template-areas: "header"
+        grid-template-areas:
         "bgr"
         "img"
         "info"
