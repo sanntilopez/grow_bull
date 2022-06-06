@@ -37,31 +37,49 @@ a {
 }
 
 header {
-    background-color: black;
+    background-color: var(--black);
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    grid-area: header;
+}
+
+.headerbox {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
 }
 
 nav {
-    width: 50%;
+    display: flex;
+    align-items: center;
 }
+
+
 
 nav ul {
     width: 100%;
     display: flex;
-    padding: 1rem 0;
     align-items: center;
     justify-content: space-around;
 }
 
 nav ul a {
-    color: white;   
-    font-size: 2em;
+    color: var(--white);  
+    font-size: var(--alternative); 
     position: relative;
 }
 
 nav ul a.active,nav ul a:hover {
     color: var(--green);
+}
+
+header li {
+    color: var(--black);
+    list-style-type: none;
+    padding: 0 3.4rem;
 }
 
 header li a:after {
@@ -83,17 +101,22 @@ header li a:hover:after {
     transform: scaleX(1);
 }
 
-li {
-    color: white;
-    list-style-type: none;
+header label {
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
 }
 
-li img {
-    width: 70px;
+header input {
+    display: none;
+}
+
+header img {
+    width: 80px;
 }
 
 header li a:hover {
-    color: #00FF75;
+    color: var(--green);
 }
 
 .section1 {
@@ -141,6 +164,7 @@ h1 {
     background-color: #000;
     padding: 5rem 12rem;
     border-radius: 12px;
+    width: 50%;
 }
 
 .form__box h2 {
@@ -158,7 +182,7 @@ h1 {
 #form form input[type="email"], #form form input[type="text"] {
     background-color: #000;
     margin: 1.5rem 0;
-    width: 600px;
+    width: 100%;
     height: 40px;
     border: none;
     border-bottom: 5px solid #00FF75;
@@ -236,14 +260,23 @@ footer img {
 
 
 i {
-    color: white;
+    color: var(--white);
     padding-right: .5rem;
-    font-size: 18px;
-
+    font-size: 1.1em;
 }
+
 
 .footbox__div a:hover > i {
     filter: opacity(.5);
+}
+
+@media screen and (max-width: 1000px) {
+    nav ul a {
+        font-size: var(--small);
+    }
+    .form__box {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -253,9 +286,44 @@ i {
     .footbox__div a {
         margin: 1rem;
     }
-}
-@media screen and (max-width:480px) {
+    header label {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: var(--black);
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10rem;
+        z-index: 1000;
+    }
+    nav ul li:first-child {
+        margin-top: 5rem;
+    }
     nav ul a {
-        font-size: 1.6em;
+        font-size: var(--medium);
+
+    }
+    nav ul a.active, nav ul a:hover {
+        color: var(--green);
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    .form__box {
+        padding: 5rem 2rem;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    h1 {
+        font-size: 6em;
     }
 }

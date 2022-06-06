@@ -1,0 +1,20 @@
+/* Misc */
+
+@import './misc/variables.scss';
+@import './misc/normalize.scss';
+@import './misc/animations.scss';
+
+/* Partials */
+
+@import './partials/header.scss';
+@import './partials/footer.scss';
+
+
+/* Pages */
+
+@import './pages/productos.scss';
+@import './pages/beneficios.scss';
+@import './pages/ofertas.scss';
+@import './pages/contacto.scss';
+@import './pages/home.scss';
+

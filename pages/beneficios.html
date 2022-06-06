@@ -14,23 +14,30 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="./ofertas.html">OFERTAS</a></li>
-                <li><a href="../index.html"><img src="../img/GrowBullWhite.png" alt="Grow Bull"></a></li>
-                <li><a class="active" href="./beneficios.html">BENEFICIOS</a></li>
-                <li><a href="./contacto.html">CONTACTO</a></li>
-            </ul>
-        </nav>
+        <div class="headerbox">
+            <picture>
+                <img src="../img/GrowBullWhite.png" alt="Grow Bull">
+            </picture>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check"><i class="fas fa-bars"></i></label>
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="../pages/productos.html">PRODUCTOS</a></li>
+                    <li><a href="../pages/ofertas.html">OFERTAS</a></li>
+                    <li><a class="active" href="beneficios.html">BENEFICIOS</a></li>
+                    <li><a href="../pages/contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <section class="section1">
         <article class="section1__article animate__animated animate__bounceInLeft">
             <h1>BENEFICIOS</h1>
-            <a href="../pages/productos.html">VER PRODUCTOS</a>
         </article>
     </section>
     <section class="beneficios">
+        <div class="flex-container">
         <article class="beneficios__article">
             <picture>
                 <img src="../img/gym.jpg" alt="">  
@@ -52,6 +59,7 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi atque dolores mollitia similique,
                 corrupti porro quidem aspernatur maxime, recusandae voluptate architecto quas iusto id expedita adipisci vero aut laboriosam distinctio.</p>
         </article>
+        </div>
     </section>
     <footer>
         <div class="footbox">  

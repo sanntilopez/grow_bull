@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: var(--font-main);
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "bgr bgr"
+    "img info"
+    "footer footer";
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+a {
+    text-decoration: none;
+}

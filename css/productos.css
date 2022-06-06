@@ -52,25 +52,46 @@ header {
     background-color: var(--black);
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     grid-area: header;
 }
 
-nav {
-    width: 50%;
+.headerbox {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
 }
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+
 
 nav ul {
     width: 100%;
     display: flex;
-    padding: 1rem 0;
     align-items: center;
     justify-content: space-around;
 }
 
 nav ul a {
     color: var(--white);  
-    font-size: var(--alternative);
+    font-size: var(--alternative); 
     position: relative;
+}
+
+nav ul a.active,nav ul a:hover {
+    color: var(--green);
+}
+
+header li {
+    color: var(--black);
+    list-style-type: none;
+    padding: 0 3.4rem;
 }
 
 header li a:after {
@@ -92,18 +113,18 @@ header li a:hover:after {
     transform: scaleX(1);
 }
 
-nav ul a.active,nav ul a:hover {
-    color: var(--green);
+header label {
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
 }
 
-header li {
-    color: var(--white);
-    list-style-type: none;
-    padding: 0 3.4rem;
+header input {
+    display: none;
 }
 
-li img {
-    width: 70px;
+header img {
+    width: 80px;
 }
 
 header li a:hover {
@@ -123,7 +144,7 @@ header li a:hover {
 }
 
 .section1__article {
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,6 +239,9 @@ i {
         grid-template-rows: auto auto auto;
         grid-template-columns: repeat(2, minmax(300px, 400px));
     }
+    nav ul a {
+        font-size: var(--small);
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -227,22 +251,46 @@ i {
     .footbox__div a {
         margin: 1rem;
     }
-    nav ul a {
-        font-size: var(--base);
-    }
     .grid-container {
         grid-template-rows: repeat(6, auto);
         grid-template-columns:  minmax(250px, 350px);
     }
+    header label {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: var(--black);
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10rem;
+        z-index: 1000;
+    }
+    nav ul li:first-child {
+        margin-top: 5rem;
+    }
+    nav ul a {
+        font-size: var(--medium);
+
+    }
+    nav ul a.active, nav ul a:hover {
+        color: var(--green);
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
 
 }
 
+
 @media screen and (max-width:480px) {
-    nav ul a {
-        font-size: var(--small);
-    }
     h1 {
         font-size: 6em;
     }
-
 }

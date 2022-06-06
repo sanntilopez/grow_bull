@@ -147,7 +147,8 @@ header li a:hover {
 .section1__article {
     display: flex;
     justify-content: center;
-    flex: 7;
+    flex: 10;
+    margin-bottom: 10rem;
 }
 
 .section1__article div {
