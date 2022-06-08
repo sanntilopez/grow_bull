@@ -1,20 +1,17 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 :root {
-    /*font-family*/
     --font-main: 'Oswald', sans-serif;
     --font-secondary: 'Barlow', sans-serif;
-    /* colors */
     --white: #FBFBFB;
     --blue: #1B2845;
     --gray: #2B2B2B;
     --black: #000;
     --green: #2DD881;
-    /* font-size */
     --small: 1.6em;
     --base: 1.8em;
     --alternative: 2em;
@@ -277,4 +274,4 @@ i {
     h1 {
         font-size: 6em;
     }
-}
+} */
