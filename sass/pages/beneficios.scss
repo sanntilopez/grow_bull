@@ -1,59 +1,71 @@
-.section1 {
-    background-image: url(../img/bgimg.jpg);
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-}
+#beneficios {
+    .head {
+        background-color: black;
+        &__box {
+            padding: 1rem 0;
+        }
+    }
+    .section1 {
+        background-image: url(../img/bgimg.jpg);
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        &__article {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                color: #fff;
+                font-size: 8em;
+            }
+        }
+    }
+    .beneficios {
+        margin: 4rem 0;
+        display: flex;
+        justify-content: center;
+        .flex-container {
+            display: flex;
+            gap: 4rem;
+            width: 80%;
+            .beneficios__article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0 0 8px #0008;
+                img {
+                    width: 100%;
+                }
+                p {
+                    padding: 1.5rem 1rem ;
+                    font-size: 1.6em;
+                }
+            }
+        }
+    }
 
-.section1__article {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    @media screen and (max-width: 1000px) {
+        .flex-container {
+            flex-direction: column;
+        }
+    }
+    @media screen and (max-width:480px) {
+        .section1 h1 {
+            font-size: 6em;
+        }
+    }
 
-h1 {
-    color: #fff;
-    font-size: 8em;
-}
 
-.section1__article a {
-    width: fit-content;
-    color: var(--black);
-    font-size: var(--medium);
-    background-color: var(--green);
-    padding: .8rem 1.3rem;
-    margin-top: 3rem;
-}
 
-.section1__article a:hover {
-    background-color: #5cde99;
-}
 
-.beneficios {
-    display: flex;
-    justify-content: center;
-    margin: 4rem 0;
-    gap: 4rem;
 
-}
 
-.beneficios__article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    box-shadow: 0 0 8px #0008;
-}
 
-.beneficios__article img {
-    width: 400px;
-}
 
-.beneficios__article p {
-    padding: 1.5rem 1rem ;
-    font-size: 1.6em;
+
+
 }
