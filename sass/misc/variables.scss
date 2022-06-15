@@ -1,24 +1,22 @@
-
-
-
-    :root {
+        /*colors*/
+        $colors:(
+            white: #FBFBFB,
+            blue: #1B2845,
+            gray: #2B2B2B,
+            black: #000,
+            green: #2DD881
+        );
+        
         /*font-family*/
-        --font-main: 'Oswald', sans-serif;
-        --font-secondary: 'Barlow', sans-serif;
-        /* colors */
-        --white: #FBFBFB;
-        --blue: #1B2845;
-        --gray: #2B2B2B;
-        --black: #000;
-        --green: #2DD881;
-        /* font-size */
-        --small: 1.6em;
-        --base: 1.8em;
-        --alternative: 2em;
-        --medium: 2.4em;
-        --big: 5.2em;
-        --ultrabig: 8em;
-    }
+        $font-main: 'Oswald', sans-serif;
+        $font-secondary: 'Barlow', sans-serif;
 
+        /* font-size */
+        $small: 1.6em;
+        $base: 1.8em;
+        $alternative: 2em;
+        $medium: 2.4em;
+        $big: 5.2em;
+        $ultrabig: 8em;
 
 

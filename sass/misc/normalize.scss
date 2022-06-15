@@ -11,5 +11,17 @@ a {
     text-decoration: none;
 }
 body {
-    font-family: var(--font-main);
+    font-family: $font-main;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

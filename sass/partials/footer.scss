@@ -13,16 +13,16 @@ footer {
         &__div {
             display: flex;
             a {
-                color: var(--white);
-                font-size: var(--base);
+                color: map-get($colors , white);
+                font-size: $base;
                 margin: 3rem;
                 font-weight: 200;
-            }
+            }   
             a:hover {
                 color: rgb(159, 159, 159);
             }
             i {
-                color: var(--white);
+                color: map-get($colors , white);
                 padding-right: .5rem;
                 font-size: 1.1em;
             }

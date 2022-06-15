@@ -3,12 +3,13 @@
         grid-template-areas: 
         "bgr bgr"
         "img info"
+        "section3 section3"
         "footer footer";
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: auto 1fr auto auto;
         grid-template-columns: repeat(2, 1fr);
     .section1 {
         background-image: url(../img/bgimg.jpg);
-        background-position: center;
+
         background-size: cover;
         height: 900px;
         display: flex;
@@ -16,30 +17,27 @@
         justify-content: space-between;
         grid-area: bgr;
         &__article {
-            display: flex;
-            justify-content: center;
+            @include flex-row-center;
             flex: 2;
             margin-bottom: 10rem;
             div {
                 width: 80%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                @include flex-column-center;
                 h1 {
                     color: white;
-                    font-size: var(--ultrabig);
+                    font-size: $ultrabig;
                 }
                 p {
-                    font-size: var(--small);
-                    font-family: var(--font-secondary);
-                    color: var(--white);
+                    font-size: $small;
+                    font-family: $font-secondary;
+                    color: map-get($colors , white );
                     max-width: 400px;
                 }
                 a {
                     width: fit-content;
-                    color: var(--black);
-                    font-size: var(--medium);
-                    background-color: var(--green);
+                    color: map-get($colors , black);
+                    font-size: $medium;
+                    background-color: map-get($colors , green);
                     padding: .8rem 1.3rem;
                     margin-top: 3rem;
                 }
@@ -60,35 +58,48 @@
     .hometext {
         grid-area: info;
         color: #000;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-column-center;
         &__box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            @include flex-column-center;
             gap: 2.4rem;
             margin-left: 10rem;
-            h2 {
-                font-size: var(--big);
+            &__title {
+                font-size: $big;
             }
             p {
                 max-width: 700px;
-                min-width: 300px;
-                font-size: var(--base);
-                font-family: var(--font-secondary);
+                font-size:$base;
+                font-family: $font-secondary;
                 margin-right: 2rem;
             }
         }
     }
 
+    .section3 {
+        background-image: url(../img/section3.jpg);
+        @include flex-row-center;
+        align-items: center;
+        height: 400px;
+        background-size: cover;
+        grid-area: section3;
+        article {
+            width: 80%;
+        }
+        h2 {
+            @extend .hometext__box__title;
+            color: white;
+        }
+    }
+
+
     @media screen and (max-width: 1000px) {
-            grid-template-rows: auto 1fr auto auto;
+            grid-template-rows: auto 1fr auto auto auto;
             grid-template-columns: auto;
             grid-template-areas:
             "bgr"
             "img"
             "info"
+            "section3"
             "footer";
         .hometext {
             margin: 2.4rem;
@@ -124,8 +135,6 @@
             img {
             width: 300px;
         }}
-    
     }
-
-
 }
+
