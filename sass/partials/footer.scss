@@ -1,21 +1,29 @@
 footer {
     background-color: black;
+    display: flex;
+    justify-content: center;
     padding: 3rem 0;
     grid-area: footer;
     .footbox {
+        width: 40%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 10rem;
+        flex-wrap: wrap;
         img {
-            width: 100px;
+            width: 150px;
         }
         &__div {
             display: flex;
+            flex-direction: column;
+            p {
+                color: #fff;
+                font-size: $medium;
+            }
             a {
                 color: map-get($colors , white);
                 font-size: $base;
-                margin: 3rem;
+                margin: 1.8rem 0;
                 font-weight: 200;
             }   
             a:hover {
@@ -34,6 +42,13 @@ footer {
 }
 
 @media screen and (max-width:768px) {
+    footer .footbox {
+        justify-content: center;
+        gap: 5rem;
+        p {
+            text-align: center;
+        }
+    }
     .footbox__div {
         flex-direction: column;
         a {

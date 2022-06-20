@@ -1,19 +1,22 @@
 #beneficios {
     .head {
-        background-color: black;
+        background-color: rgba(0,0,0,.6);
+        width: 100%;
         &__box {
-            padding: 1rem 0;
+            padding: 2rem 0;
         }
     }
     .section1 {
         background-image: url(../img/bgimg.jpg);
-        height: 500px;
+        height: 600px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        @include flex-row-center;
+        @include flex-column-center;
+        align-items: center;
         &__article {
             width: 80%;
+            flex: 2;
             @include flex-column-center;
             h1 {
                 color: #fff;
@@ -21,24 +24,34 @@
             }
         }
     }
+
     .beneficios {
-        margin: 4rem 0;
-        @include flex-row-center;
-        .flex-container {
+        display: flex;
+        justify-content: center;
+        &__box {
+            width: 70%;
             display: flex;
-            gap: 4rem;
-            width: 80%;
-            .beneficios__article {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                box-shadow: 0 0 8px #0008;
-                img {
-                    width: 100%;
+            flex-direction: column;
+            margin: 7rem 0;
+            gap: 3rem;
+            article {
+                box-shadow: 0 0 8px #0005;
+                padding: 4rem;
+                h2 {
+                    font-size: 3em;
+                    padding-bottom: 1rem;
                 }
                 p {
-                    padding: 1.5rem 1rem ;
-                    font-size: 1.6em;
+                    font-size: $medium;
+                    font-family: $font-secondary;
+                    line-height: 40px;
+                }
+                ul{
+                    li {
+                        font-size: $medium;
+                        font-family: $font-secondary;
+                        line-height: 40px;
+                    }
                 }
             }
         }
@@ -48,10 +61,68 @@
         .flex-container {
             flex-direction: column;
         }
+        .beneficios {
+            &__box{
+                width: 90%;
+                article {
+                    padding: 2rem;
+                    p {
+                        font-size: $base;
+                    }
+                    ul {
+                        li {
+                            font-size: $base;
+                        }
+                    }
+
+                }
+            }
+        }
     }
+
+    @media screen and (max-width: 768px) {
+        .beneficios {
+            &__box{
+                article {
+                    p {
+                        font-size: $small;
+                    }
+                    h2 {
+                        font-size: $base;
+                    }
+                    ul {
+                        li {
+                            font-size: $small;
+                        }
+                    }
+                }
+            }
+        }
+        }
+
+
+    
+
     @media screen and (max-width:480px) {
         .section1 h1 {
             font-size: 6em;
+        }
+        .beneficios {
+            &__box{
+                article {
+                    p {
+                        font-size: 1.4em;
+                    }
+                    h2 {
+                        font-size: $base;
+                    }
+                    ul {
+                        li {
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+            }
         }
     }
 

@@ -4,12 +4,12 @@
         "bgr bgr"
         "img info"
         "section3 section3"
+        "prod prod"
         "footer footer";
-        grid-template-rows: auto 1fr auto auto;
+        grid-template-rows: auto 1fr auto auto auto;
         grid-template-columns: repeat(2, 1fr);
     .section1 {
         background-image: url(../img/bgimg.jpg);
-
         background-size: cover;
         height: 900px;
         display: flex;
@@ -42,7 +42,7 @@
                     margin-top: 3rem;
                 }
                 a:hover {
-                    background-color: #5cde99;
+                    background-color: #61ffab;
                 }
             }
         }
@@ -79,27 +79,98 @@
         background-image: url(../img/section3.jpg);
         @include flex-row-center;
         align-items: center;
-        height: 400px;
+        height: 450px;
         background-size: cover;
         grid-area: section3;
         article {
             width: 80%;
         }
         h2 {
-            @extend .hometext__box__title;
+            font-size: $big;
             color: white;
+        }
+    }
+
+    .section4 {
+        display: flex;
+        justify-content: center;
+        margin: 3rem 0;
+        grid-area: prod;
+        .products {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-size: $medium;
+                padding: 2rem 0;
+            }
+            &__box {
+                display: flex;
+                justify-content: space-between;
+                gap: 2rem;
+                flex-wrap: wrap;
+                width: 100%;
+                article {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2.4rem;
+                    box-shadow:0 0 8px #0005;
+                    flex: 1 1;
+                    padding: 2.4rem;
+                    img {
+                        height: 232px;
+                    }
+                    p {
+                        font-size: $medium
+                    }
+                    a {
+                        color: #000;
+                        font-size: $base;
+                        background-color: map-get($colors , green );
+                        font-family: $font-secondary;
+                        padding: .5rem 4rem;
+                        font-weight: bold;
+                    }
+                    a:hover {
+                        background-color: #5cde99;
+                    }
+                }
+            }
+            .button {
+            background-color: #000;
+            width: 377px; 
+            height: 43px;
+            display: flex;
+            align-self: center;
+            margin-top: 2.4rem;
+            a:hover{
+                background-color: #121212;
+            }
+            a {
+                width: 100%;
+                color: #fff;
+                font-size: $medium;
+                font-family: $font-secondary;
+                font-weight: bold;
+                text-align: center;
+                line-height: 43px;
+            }
+
+            }
         }
     }
 
 
     @media screen and (max-width: 1000px) {
-            grid-template-rows: auto 1fr auto auto auto;
+            grid-template-rows: auto 1fr auto auto auto auto;
             grid-template-columns: auto;
             grid-template-areas:
             "bgr"
             "img"
             "info"
             "section3"
+            "prod"
             "footer";
         .hometext {
             margin: 2.4rem;
@@ -113,7 +184,6 @@
         .homeimg{
             display: flex;
             justify-content: center;
-            margin-top: 2.4rem;
             &__img{
                 overflow: visible;
                 display: flex;
@@ -126,6 +196,11 @@
     }
     
     @media screen and (max-width:480px) {
+        .section3 {
+            h2 {
+                font-size: 4em;
+            }
+        }
         .section1{
             h1 {
             font-size: 6em;
@@ -135,6 +210,14 @@
             img {
             width: 300px;
         }}
+        .section4 .products .button {
+            width: 95%;
+            a {
+                font-size:$base;
+            }
+
+
+        }
     }
 }
 
