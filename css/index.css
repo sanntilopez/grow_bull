@@ -132,6 +132,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   footer .footbox {
+    width: 50%;
     justify-content: center;
     gap: 5rem; }
     footer .footbox p {
@@ -269,11 +270,17 @@ footer {
       #beneficios .beneficios__box article p {
         font-size: 2.4em;
         font-family: "Barlow", sans-serif;
-        line-height: 40px; }
+        line-height: 40px;
+        color: #1b1b1b; }
+        #beneficios .beneficios__box article p b {
+          color: #000; }
       #beneficios .beneficios__box article ul li {
         font-size: 2.4em;
         font-family: "Barlow", sans-serif;
-        line-height: 40px; }
+        line-height: 40px;
+        color: #1b1b1b; }
+        #beneficios .beneficios__box article ul li b {
+          color: #000; }
 
 @media screen and (max-width: 1000px) {
   #beneficios .flex-container {
@@ -423,9 +430,11 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem; }
+      gap: 1rem;
+      flex: 1 1; }
       #contacto .contactos__box div i {
-        font-size: 5.2em; }
+        font-size: 4em;
+        color: #5d5d5d; }
       #contacto .contactos__box div h2 {
         font-size: 2.4em; }
       #contacto .contactos__box div p {
