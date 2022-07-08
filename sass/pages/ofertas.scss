@@ -1,4 +1,5 @@
 #ofertas {
+    /* header */
     .head {
         background-color: rgba(0,0,0,.6);
         width: 100%;
@@ -6,6 +7,7 @@
             padding: 2rem 0;
         }
     }
+    /* section1 */
     .section1 {
         background-image: url(../img/bgimg.jpg);
         height: 600px;
@@ -24,6 +26,7 @@
             }
         }
     }
+    /* ofertas */
     .ofertas {
         display: flex;
         flex-direction: column;
@@ -70,6 +73,9 @@
             }
         }
     }
+
+    /* MEDIA QUERIES */
+    
     @media screen and (max-width:768px) {
         .ofertas {
         .oferta1 {

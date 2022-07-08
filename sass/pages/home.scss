@@ -8,6 +8,7 @@
         "footer footer";
         grid-template-rows: auto 1fr auto auto auto;
         grid-template-columns: repeat(2, 1fr);
+    /* section1 */
     .section1 {
         background-image: url(../img/bgimg.jpg);
         background-size: cover;
@@ -47,6 +48,7 @@
             }
         }
     }
+    /* sobre nosotros */
     .homeimg {
         grid-area: img;
         overflow: hidden;
@@ -74,7 +76,7 @@
             }
         }
     }
-
+    /* section3 */
     .section3 {
         background-image: url(../img/section3.jpg);
         @include flex-row-center;
@@ -90,7 +92,7 @@
             color: white;
         }
     }
-
+    /* productos destacados */
     .section4 {
         display: flex;
         justify-content: center;
@@ -161,6 +163,7 @@
         }
     }
 
+/* MEDIA QUERIES */
 
     @media screen and (max-width: 1000px) {
             grid-template-rows: auto 1fr auto auto auto auto;
