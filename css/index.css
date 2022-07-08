@@ -87,7 +87,7 @@ body {
     transition: all .5s;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 10rem;
+    gap: 7rem;
     z-index: 1000; }
     .head nav ul a {
       font-size: 2.4em; }
@@ -667,14 +667,16 @@ footer {
         display: flex;
         justify-content: center; }
         #home .homeimg__img img {
-          width: 500px; } }
+          width: 100%; }
+    #home .section1 {
+      height: 600px; } }
   @media screen and (max-width: 480px) {
     #home .section3 h2 {
       font-size: 4em; }
-    #home .section1 h1 {
-      font-size: 6em; }
+    #home .section1__article div h1 {
+      font-size: 5.2em; }
     #home .homeimg img {
-      width: 300px; }
+      width: 100%; }
     #home .section4 .products .button {
       width: 95%; }
       #home .section4 .products .button a {

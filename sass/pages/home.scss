@@ -189,9 +189,12 @@
                 display: flex;
                 justify-content: center;
                 img {
-                    width: 500px;
+                    width: 100%;
                 }
             }
+        }
+        .section1 {
+            height: 600px;
         }
     }
     
@@ -202,13 +205,17 @@
             }
         }
         .section1{
-            h1 {
-            font-size: 6em;
-        }
+            &__article {
+                div {
+                    h1 {
+                        font-size: $big;
+                    }
+                }
+            }
     }
         .homeimg {
             img {
-            width: 300px;
+            width: 100%;
         }}
         .section4 .products .button {
             width: 95%;
