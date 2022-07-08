@@ -20,7 +20,7 @@
             @include flex-column-center;
             h1 {
                 color: white;
-                font-size: $ultrabig;
+                font-size: 7em;
             }
         }
     }
@@ -47,8 +47,12 @@
                     box-shadow:0 0 8px #0005;
                     flex: 1;
                     padding: 2.4rem 3rem;
-                    img {
+                    .products__img {
+                        
                         height: 232px;
+                        img {
+                            height: 100%;
+                        }
                     }
                     p {
                         font-size: $medium;

@@ -132,7 +132,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   footer .footbox {
-    width: 50%;
+    width: 55%;
     justify-content: center;
     gap: 5rem; }
     footer .footbox p {
@@ -167,7 +167,7 @@ footer {
     justify-content: center; }
     #productos .section1__article h1 {
       color: white;
-      font-size: 8em; }
+      font-size: 7em; }
 
 #productos .section4 {
   display: flex;
@@ -192,8 +192,10 @@ footer {
         box-shadow: 0 0 8px #0005;
         flex: 1;
         padding: 2.4rem 3rem; }
-        #productos .section4 .products__box article img {
+        #productos .section4 .products__box article .products__img {
           height: 232px; }
+          #productos .section4 .products__box article .products__img img {
+            height: 100%; }
         #productos .section4 .products__box article p {
           font-size: 2.4em; }
         #productos .section4 .products__box article p:nth-child(2) {
